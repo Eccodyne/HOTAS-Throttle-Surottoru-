@@ -137,6 +137,9 @@ Combined wires:
 Base:
 ![Base](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Base.JPG)
 
+Front view:
+![FrontView](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/IMG_4248.JPG)
+
 Buttons:
 ![Buttons](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Base_Cover.JPG)
 
