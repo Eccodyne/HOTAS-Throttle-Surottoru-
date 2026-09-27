@@ -101,3 +101,7 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 
 ### 📷 Images:
 
+
+
+Resistors for GND and 3.3V wires of linear potentiometer:
+![Resistors](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Resistors.jpg)
