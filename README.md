@@ -119,6 +119,9 @@ M3 threaded inserts (right handle):
 M3 threaded inserts (shafts):
 ![Inserts6](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_shafts.jpg)
 
+ESP32-S3 (with screw holes):
+![ESP32S3](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/ESSP32S3.JPG)
+
 Cable fixator:
 ![Inserts6](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Fixate_cables.jpg)
 
