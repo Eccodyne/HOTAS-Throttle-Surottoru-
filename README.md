@@ -16,6 +16,8 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 - 3D printed parts
 - ESP32 S3 Dev Kit (I used one from "diymore" ([link](https://www.amazon.de/dp/B0DWWVRNQX) to Amazon). Make sure to buy a board which has screw holes)
 - 2x carbon rods (6mm diameter, 150mm length)
+- 1x 470 Ohm resistor
+- 1x 1k Ohm resistor
 - 1x linear slide potentiometer (75mm)
 - 1x KY-004 tactile button module 
 - 4x tactile buttons (4pins), 12mm x 12mm size with a square shaped head on top (see image below)
@@ -32,14 +34,17 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 - Arduino IDE (free of cost)
 
 ***
-### 🔎 How do I get started?
+### 🔎 Instructions
 - Download *.3mf files for this project from Makerworld: [Link](https://makerworld.com/de/models/2927499-garmin-g1000-controller-ms-flight-simulator-2024#profileId-3276793)
 - 3D print the required components
 - Using a soldering iron, install the M3 heat-set threaded inserts into the printed parts as shown in the images below.
 - Solder two jumper wires (GND and SIGNAL) to each of the four tactile buttons. Use two adjacent pins on the same side of the button (see image below). Once done, you need to carefully bend the pins to the back, otherwise the cover will not fit on the base.
 - Insert the linear potentiometer into the printed holder, ensuring the four pins of the potentiometer face the front of the housing.
-- Attach a GND jumper wire to the lower pin at the far end of the potentiometer (facing the back of the housing, see image). I recommend soldering the connection, but you can also use hot glue to keep the wire in place. This is what I did.
-- Attach a 3.3V jumper wire to the lowest of the four pins at the opposite end of the potentiometer.
+- Take a jumper wire (for GND) and cut it in half. Add a 470 Ohm resistor and connect the two cables by either soldering or tighly twisting the cables
+- Take a jumper wire (for 3.3V) and repeat the above procedure, though with a 1k Ohm resistor
+- Both resistors are required for the ESP32 S3 to read the full range of the linear potentiometer. The throttle will not work correctly if you skip this step.
+- Attach the GND jumper wire with the attached 470 OLhm resistor to the lower pin at the far end of the potentiometer (facing the back of the housing, see image). I recommend soldering the connection, but you can also use hot glue to keep the wire in place. This is what I did.
+- Attach the 3.3V jumper wire with the 1k Ohm resistor to the lowest of the four pins at the opposite end of the potentiometer.
 - Attach a SIGNAL jumper wire to the pin directly above the 3.3V pin.
 - Mount the potentiometer holder to the housing using two M3 screws.
 - Install the ESP32-S3 board upside down in the housing by pressing it down onto the standoffs. The two USB-C ports should fit perfectly between the two rear standoffs.
