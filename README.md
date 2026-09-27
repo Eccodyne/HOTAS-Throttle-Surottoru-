@@ -125,3 +125,15 @@ Combined wires:
 
 ![Combined1](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Combined_GND_wires_I.jpg)
 ![Combined2](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Combined_GND_wires_II.jpg)
+
+Buttons:
+![Buttons](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Base_Cover.JPG)
+
+Rod Holder:
+![RodHolder](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Rod_Holder.JPG)
+
+Right shaft with wires:
+![RightShaft](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Right_Shaft.JPG)
+
+Right handle with KY-004 mdoule:
+![RightHandle](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Right_Handle.JPG)
