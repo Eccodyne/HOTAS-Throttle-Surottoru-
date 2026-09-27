@@ -122,5 +122,6 @@ Resistors for GND and 3.3V wires of linear potentiometer:
 ![Resistors](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Resistors.jpg)
 
 Combined wires:
+
 ![Combined1](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Combined_GND_wires_I.jpg)
 ![Combined2](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Combined_GND_wires_II.jpg)
