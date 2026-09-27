@@ -35,10 +35,14 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 ### 🔎 How do I get started?
 - Download *.3mf files for this project from Makerworld: [Link](https://makerworld.com/de/models/2927499-garmin-g1000-controller-ms-flight-simulator-2024#profileId-3276793)
 - Print the files with your 3D printer
-- Use a soldering iron to insert four M3 threaded inserts to the top of the housing and two inserts to the bottom (see image below)
+- Use a soldering iron to apply M3 threaded inserts to the various printed parts as per the images shown below 
 - Do the same for the right handle of the throttle (two inserts), the left handle (two inserts) and the two shafts to which the handles are connected to (see image below)
-- Use a soldering iron to solder two jumper wires (GND and SIGNAL) to each of the four tactile buttons (see image below).
-- 
+- Use a soldering iron to solder two jumper wires (GND and SIGNAL) to each of the four tactile buttons (use two pins that are right next to each other on the same side of the button, see image below)
+- Insert the linear potentiometer into the printed potentiometer holder. The fours pins of the potentiometer need to face to the front of the housing
+- Attach a jumper wire (GND) to the lower pin at the back of the potentiometer (see image). You can use hot glue to keep the jumper wire in place or use a soldering iron
+- Attach a jumper wire (3.3V) to the lowest of the four pins at the other end the potentiometer
+- Attach a jumper wire (SIGNAL) to the pin above the 3.3V PIN
+- Attach the poti holder to the housing using two M3 screws
 - 
 - Install the ESP32 S3 board to the housing (upside down) by pushing it down onto the spacers. The two USB-C ports of the ESP32 S3 will fit inbetween the two spacers at the back of the housing.
 - Lock the ESP32 S3 board by using the printed screw and the fixation plate
