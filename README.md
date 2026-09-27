@@ -26,6 +26,7 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 - Set of M3 countersunk screws (various lengths) 
 - Set of M3 cylinder head screws (various lengths)
 - 2x M2.5 screws
+- Heat-shrink tubings
 - USB-C cable to connect the throttle device to your computer
 - Soldering iron
 - Super glue
