@@ -2,9 +2,6 @@
 
 ![HOTAS Throttle Surottoru](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/IMG_4241.JPG)
 
-# HOTAS Throttle "Surottoru"
-This ESP32-S3-based throttle is recognized by Windows as a game controller, making it ideal for flight simulators and any other games where you want to control thrust with a pysical device.
-
 ### 💡What is this repository for?
 Ready to build your own physical throttle? This repository holds the code and instructions for my HOTAS Throttle Surottoru project.
 
