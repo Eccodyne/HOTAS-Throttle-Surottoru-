@@ -126,6 +126,9 @@ Combined wires:
 ![Combined1](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Combined_GND_wires_I.jpg)
 ![Combined2](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Combined_GND_wires_II.jpg)
 
+Base:
+![Base](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Base.JPG)
+
 Buttons:
 ![Buttons](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Base_Cover.JPG)
 
