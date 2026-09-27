@@ -90,7 +90,7 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 - Pull the throttle all the way back and note the value shown as "Position". This will be your rawMinValue in the final Arduino code.
 - Push the throttle all the way forward and note this value as well. This will be your rawMaxValue.
 - Close the sketch, create a new one, and paste the code from the "HotasThrottleCode.ino" file.
-- On line 13 (buttonPins[]), replace the default pin numbers with your specific values. IMPORTANT: The pin for the KY-004 button must be placed at the first position in the array!
+- On line 13 (buttonPins[]), replace the default pin numbers with your specific values. IMPORTANT: The pin for the KY-004 tactile button module must be placed at the first position in the array!
 - On lines 16 and 17, replace the default values with your own rawMinValue and rawMaxValue.
 - Save the sketch and upload it to your ESP32-S3.
 - Move the USB-C cable from the TTL port to the OTG port on your ESP32-S3.
