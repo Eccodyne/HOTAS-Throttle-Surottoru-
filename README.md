@@ -101,7 +101,14 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 
 ### 📷 Images:
 
+M3 threaded inserts (base):
+![Inserts](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_base.jpg)
+![Inserts2](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_base_2.jpg)
 
+M3 threaded inserts (left handle):
+![Inserts3](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_left_handle.jpg)
+![Inserts4](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_right_handle_front.jpg)
+![Inserts5](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_right_handle_back.jpg)
 
 Resistors for GND and 3.3V wires of linear potentiometer:
 ![Resistors](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Resistors.jpg)
