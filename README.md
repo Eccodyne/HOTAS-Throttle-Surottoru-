@@ -119,6 +119,10 @@ M3 threaded inserts (shafts):
 ESP32-S3 (with screw holes):
 ![ESP32S3](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/ESSP32S3.JPG)
 
+Tactile button (you need four of these):
+![TactileButton](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/TactileButton.JPG)
+
+
 Cable fixator:
 ![Inserts6](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Fixate_cables.jpg)
 
