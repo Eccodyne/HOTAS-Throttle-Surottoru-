@@ -28,6 +28,8 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 - 2x M2.5 screws
 - USB-C cable to connect the throttle device to your computer
 - Soldering iron
+- Super glue
+- Hot glue
 - 4x self-adhesive rubber feet to be attached to the bottom of the housing
 
 ***
@@ -39,15 +41,16 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 
 ### 1️⃣ Building the HOTAS throttle:
 
-- Download *.3mf files for this project from Makerworld: [Link](https://makerworld.com/de/models/2927499-garmin-g1000-controller-ms-flight-simulator-2024#profileId-3276793)
-- 3D print the required components
+- Download *.3mf files for this project from Makerworld: [Link](https://makerworld.com/de/models/2927499-garmin-g1000-controller-ms-flight-simulator-2024#profileId-3276793).
+- 3D print the required components.
+- Use super glue to attach the logo (Japanese text) to the front of the base.
 - Using a soldering iron, install the M3 heat-set threaded inserts into the printed parts as shown in the images below.
 - Solder two jumper wires (GND and signal) to each of the four tactile buttons. Use two adjacent pins on the same side of the button (see image below). Once done, you need to carefully bend the pins to the back, otherwise the cover will not fit on the base.
 - Insert the linear potentiometer into the printed holder, ensuring the four pins of the potentiometer face the front of the housing.
 - Take a jumper wire (for GND) and cut it in half. Add a 470 Ohm resistor and connect the two cables by either soldering or tighly twisting the cables.
 - Take a jumper wire (for 3.3V) and repeat the above procedure, though with a 1k Ohm resistor.
 - Both resistors are required for the ESP32 S3 to read the full range of the linear potentiometer. The throttle will not work correctly if you skip this step.
-- Attach the GND jumper wire with the attached 470 OLhm resistor to the lower pin at the far end of the potentiometer (facing the back of the housing, see image). I recommend soldering the connection, but you can also use hot glue to keep the wire in place. This is what I did.
+- Attach the GND jumper wire with the attached 470 OLhm resistor to the lower pin at the far end of the potentiometer (facing the back of the housing, see image). 
 - Attach the 3.3V wire with the 1k Ohm resistor to the lowest of the four pins at the opposite end of the potentiometer.
 - Attach a signal wire to the pin directly above the 3.3V pin.
 - Mount the potentiometer holder to the housing using two M3 screws.
