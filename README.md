@@ -107,8 +107,16 @@ M3 threaded inserts (base):
 
 M3 threaded inserts (left handle):
 ![Inserts3](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_left_handle.jpg)
+
+M3 threaded inserts (right handle):
 ![Inserts4](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_right_handle_front.jpg)
 ![Inserts5](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_right_handle_back.jpg)
+
+M3 threaded inserts (shafts):
+![Inserts6](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/M3_threaded_inserts_shafts.jpg)
+
+Cable fixator:
+![Inserts6](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Fixate_cables.jpg)
 
 Resistors for GND and 3.3V wires of linear potentiometer:
 ![Resistors](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Resistors.jpg)
