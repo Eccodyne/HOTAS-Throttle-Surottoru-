@@ -1,6 +1,6 @@
 # HOTAS Throttle "Surottoru"
 
-
+![HOTAS Throttle Surottoru](https://github.com/Eccodyne/HOTAS-Throttle-Soruttoru/blob/main/images/IMG_4241.jpg)
 
 📌 Welcome to the "Garmin G1000 Controller" Project!
 Garmin G1000 Controller
