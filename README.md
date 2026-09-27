@@ -37,7 +37,7 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 ***
 ### 🔎 Instructions
 
-1) Building the HOTAS throttle:
+### 1) Building the HOTAS throttle:
 
 - Download *.3mf files for this project from Makerworld: [Link](https://makerworld.com/de/models/2927499-garmin-g1000-controller-ms-flight-simulator-2024#profileId-3276793)
 - 3D print the required components
@@ -75,5 +75,15 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 - Guide the GND, 3.3V and signal wires through the right handle of the throttle and fixate the handle using two M3 cylinder head screws (see images below).
 - Attach the KY-004 tactile button module to the right handle of the throttle using two M2.5 screws and attach the GND, 3.3V and signal wires to the module.
 
-- 
-- 
+### 1) Running the Arudino code:
+- Install and run Arduino IDE.
+- Create a new sketch/file and add the code from the file "HotasThrottleCalibration.ino" from the file section of this Github page.
+- Connect the ESP32-S3 with a USB-C cable to your computer using the TTL USB-C port of the ESP32-S3 (its the left port on the back of the base)
+- In Arduino IDE, select the correct board ("Tools -> Board"), it should be "ESP32-S3-USB-OTG".
+- Select the correct COM port of the ESP32-S3 ("Tools -> Port").
+- In line 7 of the code, replace the pin number of the "potPin" with your own pin number that you are using on your ESP32-S3 for the linear potentiometer
+- The code reads as follows: "const int potPin = 5; // Change Pin number to your individual value". Replace 5 with your individual pin number.
+- Save the file and upload it to your ESP32-S3 board
+- Once installed, open the serial monitor in Arduino IDE. Press all buttons on the cover and the right handle of the throttle and take note of the relevant pin numbers.
+- Move the throttle all the way to the back and take note of the value shown as "Position". This value is your "rawMinValue" used to be used in the final Arduino code.
+- Move the trottle all the way to the front and take note of the value, too. This value is your "rawMaxValue".
