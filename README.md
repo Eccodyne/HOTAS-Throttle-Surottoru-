@@ -24,7 +24,8 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 - M3 threaded inserts
 - Sufficient number of jumper wires (female/female, female/male)
 - Set of M3 countersunk screws (various lengths) 
-- Set of M3 cylinder head bolts (various lengths)
+- Set of M3 cylinder head screws (various lengths)
+- 2x M2.5 screws
 - USB-C cable to connect the throttle device to your computer
 - Soldering iron
 - 4x self-adhesive rubber feet to be attached to the bottom of the housing
@@ -35,17 +36,20 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 
 ***
 ### 🔎 Instructions
+
+1) Building the HOTAS throttle:
+
 - Download *.3mf files for this project from Makerworld: [Link](https://makerworld.com/de/models/2927499-garmin-g1000-controller-ms-flight-simulator-2024#profileId-3276793)
 - 3D print the required components
 - Using a soldering iron, install the M3 heat-set threaded inserts into the printed parts as shown in the images below.
-- Solder two jumper wires (GND and SIGNAL) to each of the four tactile buttons. Use two adjacent pins on the same side of the button (see image below). Once done, you need to carefully bend the pins to the back, otherwise the cover will not fit on the base.
+- Solder two jumper wires (GND and signal) to each of the four tactile buttons. Use two adjacent pins on the same side of the button (see image below). Once done, you need to carefully bend the pins to the back, otherwise the cover will not fit on the base.
 - Insert the linear potentiometer into the printed holder, ensuring the four pins of the potentiometer face the front of the housing.
-- Take a jumper wire (for GND) and cut it in half. Add a 470 Ohm resistor and connect the two cables by either soldering or tighly twisting the cables
-- Take a jumper wire (for 3.3V) and repeat the above procedure, though with a 1k Ohm resistor
+- Take a jumper wire (for GND) and cut it in half. Add a 470 Ohm resistor and connect the two cables by either soldering or tighly twisting the cables.
+- Take a jumper wire (for 3.3V) and repeat the above procedure, though with a 1k Ohm resistor.
 - Both resistors are required for the ESP32 S3 to read the full range of the linear potentiometer. The throttle will not work correctly if you skip this step.
 - Attach the GND jumper wire with the attached 470 OLhm resistor to the lower pin at the far end of the potentiometer (facing the back of the housing, see image). I recommend soldering the connection, but you can also use hot glue to keep the wire in place. This is what I did.
-- Attach the 3.3V jumper wire with the 1k Ohm resistor to the lowest of the four pins at the opposite end of the potentiometer. Extend the wire with a
-- Attach a SIGNAL jumper wire to the pin directly above the 3.3V pin.
+- Attach the 3.3V wire with the 1k Ohm resistor to the lowest of the four pins at the opposite end of the potentiometer.
+- Attach a signal wire to the pin directly above the 3.3V pin.
 - Mount the potentiometer holder to the housing using two M3 screws.
 - Install the ESP32-S3 board upside down in the housing by pressing it down onto the standoffs. The two USB-C ports should fit perfectly between the two rear standoffs.
 - Secure the ESP32-S3 board in place using the printed fixation plate and screw.
@@ -54,14 +58,22 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 - Secure the carbon rods by screwing on the four caps.
 - Place the four tactile buttons into the back of the base cover and secure them using the printed brackets (see image below).
 - Turn the base cover over and install the four printed buttons.
-- Because the ESP32-S3 has only two GND pins, you must combine all the ground wires from the buttons into a single wire that connects to one of the GND pins. You can do this by soldering or tightly twisting the wires together, then securing them with heat shrink tubing.
-- The process needs to be repeated for the GND wires attached to the linear potentiometer and the KY-004 button module, but at a later stage.
-- Complete the wiring, extending any wires as needed if they are too short. Organize everything using the printed cable guides, which can be attached to the cover and base with adhesive tape (refer to the images below for examples). I also used heat shrinking tubes for better cable organization
-- Attach all jumper wires (SIGNAL) of the four tactile buttons to data pins on the ESP32 S3 and the combined GND cable to one of the GND pins
-- Attach the 3.3V jumper wire of the linear potentiometer to a free 3.3V pin on the ESP32 S3
-- Guide the GND, 3.3V and the SIGNAL wire cables for the KY-004 tactilbe button module through the shaft of the right handle (see image below)
-- Extend the above three cables coming down from the shaft with female/male jumper wires
-- Attach the shaft with the guided cables to the right side of the rod holder using two M3 screws from below (see images below)
-- Fixate the cables coming from the shaft using the plate as shown in the images below.
-- Combine the GND wires of the linear potentiometer and the KY-004 tactile button module into a single GND wire (either soldering or twisting cables) and connect the wire to the second GND pin of the ESP32 S3. 
-- Attach the jumper wire (SIGNAL) of the linear potentiometer to the ESP32 S3 and take note of the pin number
+- Because the ESP32-S3 has only two GND pins, you must combine all GND wires of the buttons into a single wire that connects to one of the two GND pins on the ESP32 S3. You can do this by soldering or tightly twisting the wires together, then securing them with heat shrink tubing.
+- This process needs to be repeated for the GND wires connected to the linear potentiometer and the KY-004 button module, but at a later stage.
+- Complete the wiring, extending any wires as needed if they are too short. Organize everything using the printed cable guides, which can be attached to the cover and base with adhesive tape (refer to the images below for examples). I also used heat shrink tubing for better cable management.
+- Connect all signal wires from the four tactile buttons to available data pins on the ESP32-S3, and connect the combined GND wire to one of the GND pins.
+- Connect the 3.3V wire from the linear potentiometer to a free 3.3V pin on the ESP32-S3.
+- Route the GND, 3.3V, and signal wires for the KY-004 tactile button module through the shaft of the right handle (see image below).
+- Extend the three wires coming down from the shaft using male/female jumper wires.
+- Mount the shaft with the routed wires to the right side of the rod holder using two M3 screws from below (see images below).
+- Secure the wires coming from the shaft using the plate, as shown in the images below.
+- Combine the GND wires from the linear potentiometer and the KY-004 tactile button module into a single GND wire (by either soldering or twisting them together), and connect it to the second GND pin on the ESP32-S3.
+- Connect the signal wire from the linear potentiometer to a data pin on the ESP32-S3, making sure to note down the pin number
+- Connect the 3.3V wire from the linear potentiometer to the second 3.3V pin on the ESP32-S3.
+- Make sure that the rod holder runs smoothly backand forth with the metal pin of the linear potentiometer attached to it. There should not be any resistance.
+- Place the cover over the base and fixate it with four M3 screws. 
+- Guide the GND, 3.3V and signal wires through the right handle of the throttle and fixate the handle using two M3 cylinder head screws (see images below).
+- Attach the KY-004 tactile button module to the right handle of the throttle using two M2.5 screws and attach the GND, 3.3V and signal wires to the module.
+
+- 
+- 
