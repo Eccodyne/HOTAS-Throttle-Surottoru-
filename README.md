@@ -74,16 +74,30 @@ Link to 3D printing files on Makerworld: [Click](https://makerworld.com/de/model
 - Place the cover over the base and fixate it with four M3 screws. 
 - Guide the GND, 3.3V and signal wires through the right handle of the throttle and fixate the handle using two M3 cylinder head screws (see images below).
 - Attach the KY-004 tactile button module to the right handle of the throttle using two M2.5 screws and attach the GND, 3.3V and signal wires to the module.
-
+- Attach the printed button to the cap of the right handle, place the cap on the handle and secure it with two M3 cylinder head screws.
+- Attach the left shaft to the left handle using two M3 cylinder head screws and fixate the shaft (with the attached left handle) to the rod holder with two M3 screws.
+- Secure the lid to the bottom of the housing using two M3 screws.
+  
 ### 2️⃣ Running the Arudino code:
-- Install and run Arduino IDE.
-- Create a new sketch/file and add the code from the file "HotasThrottleCalibration.ino" from the file section of this Github page.
-- Connect the ESP32-S3 with a USB-C cable to your computer using the TTL USB-C port of the ESP32-S3 (its the left port on the back of the base)
-- In Arduino IDE, select the correct board ("Tools -> Board"), it should be "ESP32-S3-USB-OTG".
-- Select the correct COM port of the ESP32-S3 ("Tools -> Port").
-- In line 7 of the code, replace the pin number of the "potPin" with your own pin number that you are using on your ESP32-S3 for the linear potentiometer
-- The code reads as follows: "const int potPin = 5; // Change Pin number to your individual value". Replace 5 with your individual pin number.
-- Save the file and upload it to your ESP32-S3 board
-- Once installed, open the serial monitor in Arduino IDE. Press all buttons on the cover and the right handle of the throttle and take note of the relevant pin numbers.
-- Move the throttle all the way to the back and take note of the value shown as "Position". This value is your "rawMinValue" used to be used in the final Arduino code.
-- Move the trottle all the way to the front and take note of the value, too. This value is your "rawMaxValue".
+- Install and run the Arduino IDE.
+- Create a new sketch and paste the code from the "HotasThrottleCalibration.ino" file provided on this GitHub page.
+- Connect the ESP32-S3 to your computer with a USB-C cable using the TTL port (the left port on the back of the base).
+- In the Arduino IDE, select the correct board (Tools -> Board); it should be "ESP32-S3-USB-OTG".
+- Select the correct COM port for the ESP32-S3 (Tools -> Port).
+- On line 7 of the code, replace the potPin variable's pin number with the one you are actually using for the linear potentiometer. The line looks like this: const int potPin = 5; // Change Pin number to your individual value.
+- Save the sketch and upload it to your ESP32-S3 board.
+- Once uploaded, open the Serial Monitor in the Arduino IDE. Press every button on the cover and the right handle of the throttle, and note down the corresponding pin numbers.
+- Pull the throttle all the way back and note the value shown as "Position". This will be your rawMinValue in the final Arduino code.
+- Push the throttle all the way forward and note this value as well. This will be your rawMaxValue.
+- Close the sketch, create a new one, and paste the code from the "HotasThrottleCode.ino" file.
+- On line 13 (buttonPins[]), replace the default pin numbers with your specific values. IMPORTANT: The pin for the KY-004 button must be placed at the first position in the array!
+- On lines 16 and 17, replace the default values with your own rawMinValue and rawMaxValue.
+- Save the sketch and upload it to your ESP32-S3.
+- Move the USB-C cable from the TTL port to the OTG port on your ESP32-S3.
+- Your computer should now recognize the ESP32-S3 as an input device.
+- Run the Windows tool joy.cpl, select your ESP32-S3 device, and click "Properties" to test if the buttons and throttle are working correctly.
+- If the buttons or throttle do not work, double-check your wiring and ensure all pin numbers were entered correctly in the Arduino code.
+- If the throttle acts "jumpy", ensure that the rod holder moves smoothly and without resistance. Also, check that no cables are in the way causing interference or obstructing its movement.
+
+### 📷 Images:
+
