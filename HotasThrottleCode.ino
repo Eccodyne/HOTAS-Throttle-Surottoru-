@@ -1,10 +1,10 @@
 #include "USB.h"
 #include "USBHIDGamepad.h"
 
-// Das Objekt, das für Windows den Joystick simuliert
+// The object that simulates the joystick for Windows
 USBHIDGamepad Gamepad;
 
-// --- Pin-Konfiguration ---
+// --- Pin configuration ---
 const int potPin = 5;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -18,13 +18,13 @@ int rawMaxValue = 3900;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// --- Debounce-Speicher ---
+// --- Debounce storage ---
 const unsigned long debounceDelay = 20; // ms
 int lastButtonReading[16];
 int lastButtonStates[16];
 unsigned long lastDebounceTime[16];
 
-// --- Throttle-Filter-Einstellungen ---
+// --- Throttle filter settings ---
 const float smoothingAlpha = 0.20f;     
 const int oversampleCount = 16;         
 const unsigned long axisUpdateInterval = 5; 
@@ -45,19 +45,19 @@ int readPotAveraged() {
 void setup() {
   Serial.begin(115200); 
 
-  // Konsistente ADC-Konfiguration
+  // Consistent ADC configuration
   analogReadResolution(12);
   analogSetAttenuation(ADC_11db);
 
-  // Buttons initialisieren (Gemischte Verkabelung)
+  // Initialize buttons (Mixed wiring)
   for (int i = 0; i < numButtons; i++) {
     if (i == 0) {
-      pinMode(buttonPins[i], INPUT_PULLDOWN); // Button 1 schaltet 3.3V durch
+      pinMode(buttonPins[i], INPUT_PULLDOWN); // Button 1 switches 3.3V through
     } else {
-      pinMode(buttonPins[i], INPUT_PULLUP);   // Alle anderen schalten GND durch
+      pinMode(buttonPins[i], INPUT_PULLUP);   // All others switch GND through
     }
     
-    // Initiale Status-Werte an die Pull-Widerstände anpassen
+    // Adapt initial status values to the pull resistors
     lastButtonReading[i] = (i == 0) ? LOW : HIGH;
     lastButtonStates[i] = (i == 0) ? LOW : HIGH;
     lastDebounceTime[i] = 0;
@@ -65,7 +65,7 @@ void setup() {
 
   smoothedValue = readPotAveraged();
 
-  // --- Die USB-Erkennung für Windows ---
+  // --- USB recognition for Windows ---
   USB.productName("Surottoru");
   USB.manufacturerName("Custom HOTAS Throttle");
 
@@ -88,9 +88,9 @@ void loop() {
       if (reading != lastButtonStates[i]) {
         lastButtonStates[i] = reading;
         
-        // Prüfen, ob der Taster als "gedrückt" gilt
+        // Check if the button is considered "pressed"
         bool isPressed = false;
-        if (i == 0 && reading == LOW) {     // GEÄNDERT: Reagiert jetzt auf LOW
+        if (i == 0 && reading == LOW) {     // CHANGED: Now reacts to LOW
           isPressed = true; 
         } else if (i > 0 && reading == LOW) {
           isPressed = true; 
@@ -112,18 +112,18 @@ void loop() {
 
     int rawValue = readPotAveraged();
 
-    // Glättung
+    // Smoothing
     smoothedValue = (smoothingAlpha * rawValue) + ((1.0f - smoothingAlpha) * smoothedValue);
     int currentValue = (int)(smoothedValue + 0.5f);
 
-    // Erzeuge eine kleine "Deadzone" an den physikalischen Enden, damit 100% und 0% sicher gehalten werden
+    // Create a small "deadzone" at the physical ends so that 100% and 0% are securely held
     currentValue = constrain(currentValue, rawMinValue + 10, rawMaxValue - 20);
 
-    // Mapping auf Windows-Werte
+    // Mapping to Windows values
     int axisValue = map(currentValue, rawMinValue + 10, rawMaxValue - 20, -127, 127);
     axisValue = constrain(axisValue, -127, 127);
 
-    // Hysterese-Check. Nur senden, wenn die Änderung größer/gleich 2 ist
+    // Hysteresis check. Only send if the change is greater than or equal to 2
     if (abs(axisValue - lastSentAxisValue) >= axisHysteresis) {
       Gamepad.leftStick(0, axisValue);
       lastSentAxisValue = axisValue;
