@@ -61,10 +61,10 @@ void loop() {
 
   if (abs(currentValue - lastAnalogValue) > 1) {
     
-    // Berechne den Prozentsatz als Kommazahl (float) und invertiere ihn direkt (100 - X)
+    // Calculate the percentage as a floating-point number (float) and invert it directly (100 - X)
     float percentage = 100.0 - (((float)currentValue - rawMinValue) / (rawMaxValue - rawMinValue) * 100.0);
     
-    // Grenzen durchsetzen (verhindert Werte unter 0.0 oder über 100.0)
+    // Enforce limits (prevents values below 0.0 or above 100.0)
     if (percentage < 0.0) percentage = 0.0;
     if (percentage > 100.0) percentage = 100.0;
     
@@ -72,7 +72,7 @@ void loop() {
     Serial.print(currentValue);
     Serial.print(" | Position: ");
     
-    // Die ", 1" am Ende gibt an, dass 1 Nachkommastelle gedruckt wird (z.B. 0.8)
+    // The ", 1" at the end specifies that 1 decimal place is printed (e.g., 0.8)
     Serial.print(percentage, 1); 
     Serial.println("%");
     
