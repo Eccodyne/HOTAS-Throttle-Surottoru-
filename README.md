@@ -1,6 +1,6 @@
 ## 📌 Welcome to the "HOTAS Throttle Surottoru" Project!
 
-![HOTAS Throttle Surottoru](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/IMG_4241.JPG)
+![HOTAS Throttle Surottoru](https://github.com/Eccodyne/HOTAS-Throttle-Surottoru-/blob/main/images/Teaser_Horizontal.jpg)
 
 ### 💡What is this repository for?
 Ready to build your own physical throttle? This repository holds the code and instructions for my HOTAS Throttle Surottoru project.
